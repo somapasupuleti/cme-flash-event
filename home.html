@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Home Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+        <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="css/util.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+        Page closes in <span id="time"></span> minutes!, Data will be Auto saved
+        <div class="limiter">
+                <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+
+                        <h1>Solve all</h1><br><br><br>
+<img src="images/qr-code.jpg" alt="Smiley face" height="100" width="100">
+                        <p>Question 1</p>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Option 1</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Option 2</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Option 3</label><br>
+  <input type="radio" id="other1" name="gender" value="other1">
+  <label for="other">Option 4</label>
+
+  <br>
+
+  <p>Question 1</p>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Option 1</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Option 2</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Option 3</label><br>
+  <input type="radio" id="other1" name="gender" value="other1">
+  <label for="other">Option 4</label>
+</div>
+</div>
+
+
+<!--===============================================================================================-->
+        <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+        <script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+        <script src="vendor/bootstrap/js/popper.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+        <script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+        <script src="vendor/daterangepicker/moment.min.js"></script>
+        <script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+        <script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+        <script src="js/main.js"></script>
+        <script>
+        setTimeout('Redirect()', 20000);
+function Redirect()
+{
+    window.location="index.html";
+}
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 20,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+};
+        </script>
+</body>
+</html>
