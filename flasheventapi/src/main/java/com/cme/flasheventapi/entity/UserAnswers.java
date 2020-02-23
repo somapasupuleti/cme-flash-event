@@ -7,6 +7,8 @@ import java.sql.Date;
 @Table(name = "user_answers")
 public class UserAnswers {
     @Id
+    @SequenceGenerator(name="SEQ_GEN", sequenceName="SEQ_USER_ANSWERS", allocationSize=1)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQ_GEN")
     private Long id;
 
     @Column(name = "user_name")
